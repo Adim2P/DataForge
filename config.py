@@ -1,0 +1,8 @@
+OUTPUT_SUFFIX = "_validated"
+
+# Excel Color Highlighting
+
+ERROR_FILL_COLOR = "FFC7E"
+ERROR_FONT_COLOR = "9C0006"
+
+VALIDATE_FORMULAS = False
