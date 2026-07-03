@@ -1,6 +1,7 @@
 from openpyxl.styles import PatternFill
+from config import ERROR_FILL_COLOR
 
 ERROR_FILL = PatternFill(
     fill_type="solid",
-    fgColor="FFC7CE"
+    fgColor=ERROR_FILL_COLOR
 )
