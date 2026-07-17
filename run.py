@@ -19,7 +19,7 @@ def main():
     print("\n1. Validate Workbook")
     print("2. Exit\n")
 
-    print("\nChoose an option:")
+    print("Choose an option:")
 
     choice = input("> ").strip()
 
