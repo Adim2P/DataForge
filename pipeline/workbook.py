@@ -24,7 +24,10 @@ def open_workbook(file_path: str) -> Workbook:
 def generate_output_path(file_path: str) -> Path:
     path = Path(file_path)
 
-    output_path = path.with_name(
+    output_directory = Path("output")
+    output_directory.mkdir(parents=True, exist_ok=True)
+
+    output_path = output_directory / (
         f"{path.stem}{OUTPUT_SUFFIX}{path.suffix}"
     )
 
