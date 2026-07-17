@@ -1,7 +1,11 @@
 from logger import get_logger
 
 from pipeline.engine import ValidationEngine
-from pipeline.workbook import open_workbook
+from pipeline.workbook import (
+    generate_output_path,
+    open_workbook,
+    save_workbook
+)
 from validators.registry import VALIDATORS
 from pipeline.file_dialog import select_workbook
 
@@ -34,6 +38,9 @@ def main():
     workbook = open_workbook(file_path)
     engine = ValidationEngine(VALIDATORS)
     results = engine.run(workbook)
+
+    output_path = generate_output_path(file_path)
+    save_workbook(workbook, output_path)
 
     print("\nValidation Complete")
     print(f"Issues Found : {len(results)}")
