@@ -1,6 +1,7 @@
 from openpyxl import Workbook
 from logger import get_logger
 from pipeline.result import CellValidation
+from pipeline.styles import ERROR_FILL
 from config import VALIDATE_FORMULAS
 
 logger = get_logger(__name__)
@@ -38,9 +39,11 @@ class ValidationEngine:
                         if result:
                             logger.info(
                                 f"[{validator.name}] "
-                                f"{worksheet.title}!{cell.coordinate}"
+                                f"{worksheet.title}!{cell.coordinate} "
                                 f"-> {cell.value}"
                             )
+
+                            cell.fill = ERROR_FILL
 
                             results.append(
                                 CellValidation(
