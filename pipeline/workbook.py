@@ -42,6 +42,6 @@ def save_workbook(workbook: Workbook, output_path: Path) -> None:
 
     except Exception:
         logger.exception(
-            f"Failed to open workbook: {output_path}"
+            f"Failed to save workbook: {output_path}"
         )
         raise
