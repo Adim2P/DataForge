@@ -1,6 +1,6 @@
 from pathlib import Path
 from openpyxl import Workbook, load_workbook
-from config import OUTPUT_SUFFIX
+from config.config import OUTPUT_SUFFIX
 from logger import get_logger
 
 logger = get_logger(__name__)

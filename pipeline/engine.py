@@ -2,7 +2,7 @@ from openpyxl import Workbook
 from logger import get_logger
 from pipeline.result import CellValidation
 from pipeline.styles import ERROR_FILL
-from config import VALIDATE_FORMULAS
+from config.config import VALIDATE_FORMULAS
 
 logger = get_logger(__name__)
 
