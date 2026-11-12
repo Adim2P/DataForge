@@ -1,2 +1,13 @@
+# VSCode Personal Settings
 .vscode
+
+# Virtual Environment
 .venv/
+
+# File Directories
+data/
+snapshot/
+
+# Python Generated Files
+__pycache__
+*.egg-info
